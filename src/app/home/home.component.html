@@ -1,0 +1,162 @@
+<app-header></app-header>
+
+<section class="main-content">
+  <div class="containers-main">
+    <div class="seperator1">
+      <div class="col dottedline">
+        <h2 class="font">Now a wide <br>range of<br> <span class="special">kurtis</span> to<br> choose from !</h2>
+      </div>
+      <div class="col" class="imageContent">
+        <img src="/assets/banner3.jpg" width="100%">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="recent-content">
+  <div class="containers">
+    <div class="seperator">
+      <div class="dottedline">Trending Now</div>
+    </div>
+    <owl-carousel-o [options]="bannerOptions">
+
+      <ng-container *ngFor="let slide of slides1">
+        <ng-template carouselSlide>
+
+          <div class="card">
+            <div class="imageContent">
+              <img [src]="slide.img" width="100%" class="imgheightbanner" >
+            </div>
+          </div>
+        </ng-template>
+      </ng-container>
+
+    </owl-carousel-o>
+  </div>
+</section>
+
+<section class="recent-content">
+  <div class="containers">
+    <div class="seperator">
+      <div class="dottedline hr-sect">New Arrival</div>
+    </div>
+    <owl-carousel-o [options]="customOptions">
+
+      <ng-container *ngFor="let slide of newArrival">
+        <ng-template carouselSlide>
+
+          <div class="card">
+            <button (click)="addToCart(slide.cartValue, slide);" mat-icon-button
+              [ngClass]="slide.cartValue == 0 ? 'example-icon icon' : 'example-icon icon iconcolor' "
+              aria-label="Example icon-button with share icon">
+              <mat-icon>shopping_cart</mat-icon>
+            </button>
+            <button (click)="addToFavour(slide.favValue, slide);" mat-icon-button
+              [ngClass]="slide.favValue == 0 ? 'example-icon icon1' : 'example-icon icon1color' "
+              aria-label="Example icon-button with share icon">
+              <mat-icon>favorite</mat-icon>
+            </button>
+            <div class="imageContent">
+              <img [src]="slide.img" width="100%" class="imgheight">
+            </div>
+
+            <div class="content">
+              <p class="title">{{slide.title}}</p>
+              <p class="sub-title">{{slide.sub_title}}</p>
+              <p class="price">Rs {{slide.price}}</p>
+              <div class="seperator">
+                <app-rating [stardata] = "stars" [rating] ="slide.rating" [index]="index" [selected]="selected"></app-rating>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </ng-container>
+
+    </owl-carousel-o>
+  </div>
+</section>
+
+<section class="recent-content">
+  <div class="containers">
+    <div class="seperator">
+      <div class="dottedline hr-sect">Recently Viewed</div>
+    </div>
+    <owl-carousel-o [options]="customOptions">
+
+      <ng-container *ngFor="let slide of recentView">
+        <ng-template carouselSlide>
+
+          <div class="card">
+            <button (click)="addToCart(slide.cartValue, slide);" mat-icon-button
+              [ngClass]="slide.cartValue == 0 ? 'example-icon icon' : 'example-icon icon iconcolor' "
+              aria-label="Example icon-button with share icon">
+              <mat-icon>shopping_cart</mat-icon>
+            </button>
+            <button (click)="addToFavour(slide.favValue, slide);" mat-icon-button
+              [ngClass]="slide.favValue == 0 ? 'example-icon icon1' : 'example-icon icon1color' "
+              aria-label="Example icon-button with share icon">
+              <mat-icon>favorite</mat-icon>
+            </button>
+            <div class="imageContent">
+              <img [src]="slide.img" width="100%" class="imgheight">
+            </div>
+
+            <div class="content">
+              <p class="title">{{slide.title}}</p>
+              <p class="sub-title">{{slide.sub_title}}</p>
+              <p class="price">Rs {{slide.price}}</p>
+              <div class="seperator">
+                <app-rating [stardata] = "stars" [rating] ="slide.rating" [index]="index" [selected]="selected"></app-rating>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </ng-container>
+
+    </owl-carousel-o>
+  </div>
+</section>
+
+<section class="recent-content">
+  <div class="containers">
+    <div class="seperator">
+      <div class="dottedline hr-sect">Similar Product</div>
+    </div>
+    <owl-carousel-o [options]="customOptions">
+
+      <ng-container *ngFor="let slide of similarProduct">
+        <ng-template carouselSlide>
+
+          <div class="card">
+            <button (click)="addToCart(slide.cartValue, slide);" mat-icon-button
+              [ngClass]="slide.cartValue == 0 ? 'example-icon icon' : 'example-icon icon iconcolor' "
+              aria-label="Example icon-button with share icon">
+              <mat-icon>shopping_cart</mat-icon>
+            </button>
+            <button (click)="addToFavour(slide.favValue, slide);" mat-icon-button
+              [ngClass]="slide.favValue == 0 ? 'example-icon icon1' : 'example-icon icon1color' "
+              aria-label="Example icon-button with share icon">
+              <mat-icon>favorite</mat-icon>
+            </button>
+            <div class="imageContent">
+              <img [src]="slide.img" width="100%" class="imgheight">
+            </div>
+
+            <div class="content">
+              <p class="title">{{slide.title}}</p>
+              <p class="sub-title">{{slide.sub_title}}</p>
+              <p class="price">Rs {{slide.price}}</p>
+              <div class="seperator">
+                <app-rating [stardata] = "stars" [rating] ="slide.rating" [index]="index" [selected]="selected"></app-rating>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </ng-container>
+
+    </owl-carousel-o>
+  </div>
+</section>
+
+
+<app-footer></app-footer>

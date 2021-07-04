@@ -1,0 +1,67 @@
+<div class="topnav">
+    <div class="topnav-right">
+        <a>Nalli Thumbnail</a>
+        <a>Voucher</a>
+        <a>Contact Us</a>
+    </div>
+</div>
+<div class="contentNav">
+  <div class="main-logo"><img src="/assets/nallilogo.png"></div>
+  <div class="topnav-menu" >
+    <a>WOMEN</a>
+    <a>MEN</a>
+    <a>BABY & KIDS</a>
+    <a>HOME FASHION</a>
+    <a>OFFERS</a>
+  </div>
+  <div>
+    <form class="example-form">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <!-- <mat-label>Telephone</mat-label> -->
+        <span matPrefix><mat-icon class="pointer_event" matSuffix>search</mat-icon></span>
+        <input type="text" matInput>
+        <mat-icon class="pointer_event" matSuffix>menu</mat-icon>
+      </mat-form-field>
+    </form>
+  </div>
+
+  <div style="display: flex;" class="item4">
+    <div>
+      <button id = "showmenu" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <div>
+      <button mat-icon-button class="example-icon iconcolor" aria-label="Example icon-button with share icon">
+        <mat-icon  matBadge="{{this.common.favVount}}" [matBadgeHidden]="this.common.favVount == 0">favorite</mat-icon>
+      </button>
+    </div>
+    <div>
+      <button mat-icon-button class="example-icon favorite-icon iconcolor" aria-label="Example icon-button with heart icon">
+        <mat-icon matBadge="{{this.common.cartCount}}" [matBadgeHidden]="this.common.cartCount == 0">shopping_cart</mat-icon>
+      </button>
+    </div>
+    <div>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <div class="example-header-image"></div>
+      </button>
+    </div>
+  </div>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <span>WOMEN</span>
+    </button>
+    <button mat-menu-item>
+      <span>MEN</span>
+    </button>
+    <button mat-menu-item>
+      <span>BABY & KIDS</span>
+    </button>
+    <button mat-menu-item>
+      <span>HOME FASHION</span>
+    </button>
+    <button mat-menu-item>
+      <span>OFFERS</span>
+    </button>
+  </mat-menu>
+</div>

@@ -1,0 +1,10 @@
+<div class="seperator">
+    <div *ngFor = "let row of stardata">
+        <button *ngIf = "rating >= row.star" mat-icon-button class="example-icon" [style.color]="row.color" aria-label="Example icon-button with share icon">
+            <mat-icon>star</mat-icon>
+        </button>
+        <button *ngIf = "rating < row.star" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>star</mat-icon>
+        </button>
+    </div>
+</div>

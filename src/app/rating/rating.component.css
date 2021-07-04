@@ -1,0 +1,13 @@
+.seperator{
+    display: flex;
+}
+
+.mat-icon-button {
+    padding: 0;
+    min-width: 0;
+    width: 25px !important;
+    height: 40px;
+    flex-shrink: 0;
+    line-height: 40px;
+    border-radius: 50%;
+}

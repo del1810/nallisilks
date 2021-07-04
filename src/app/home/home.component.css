@@ -1,0 +1,294 @@
+.containers {
+  width: 80%;
+  margin: 5px auto;
+}
+
+.containers-main{
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+  align-items: center;
+}
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 10px 10px;
+    font-family: arial;
+    border: 1px ghostwhite;
+  }
+
+  .imgheight{
+    height: 280px;
+  }
+
+  .title{
+    color: gray;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .sub-title{
+    color: gray;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .price {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .content{
+    line-height: 0.8;
+    padding: 10px;
+  }
+::ng-deep .owl-carousel .owl-nav {
+  overflow: hidden;
+  height: 0px;
+}
+
+::ng-deep .owl-theme .owl-dots .owl-dot.active span,
+::ng-deep .owl-theme .owl-dots .owl-dot:hover span {
+  background: #5110e9;
+}
+
+
+::ng-deep .owl-carousel .item {
+  text-align: center;
+}
+
+::ng-deep .owl-carousel .nav-button {
+  height: 40px;
+  width: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 45% !important;
+}
+
+::ng-deep .owl-carousel .nav-button:hover {
+  color: black !important;
+  background: white !important;
+}
+
+::ng-deep .owl-carousel .owl-prev {
+  left: -45px;
+}
+
+::ng-deep .owl-carousel .owl-next {
+  right: -45px;
+}
+
+::ng-deep .owl-carousel .owl-prev:hover {
+  background-color: #fff;
+  color: black;
+}
+
+::ng-deep .owl-carousel .owl-next:hover {
+  background-color: #fff;
+  color: #fff;
+}
+
+::ng-deep .owl-theme .owl-nav [class*=owl-] {
+  color: black;
+  font-size: 39px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+::ng-deep .owl-carousel .prev-carousel:hover {
+  background-position: 0px -53px;
+}
+
+::ng-deep .owl-carousel .next-carousel:hover {
+  background-position: -24px -53px;
+}
+
+.icon {
+  color: #b7b7b7;
+  font-size: 100px;
+  position: absolute;
+  top: 5%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.iconcolor {
+  color: red;
+}
+
+.icon1color {
+  color: red;
+  font-size: 100px;
+  position: absolute;
+  top: 5%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.icon1 {
+  color: #b7b7b7;
+  font-size: 100px;
+  position: absolute;
+  top: 5%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.icon2 {
+  color: #b7b7b7;
+  font-size: 20px;
+  width: 24px;
+}
+
+.seperator{
+  display: flex;
+}
+
+.seperator1{
+  display: flex;
+}
+
+.newhr {
+  /* border-top: 1px dotted black;
+  border-bottom: 1px solid black; */
+  width: 50%;
+}
+
+
+.dottedline{
+  margin: 10px auto;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.col{
+  width: 50%;
+  margin: auto;
+  padding: 10px;
+}
+
+.main-content{
+  background-color: #b7b7b7;
+}
+
+.special{
+  color: red;
+}
+
+.font{
+  font-size: 40px;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.imgheightbanner{
+  height: 320px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .font{
+    font-size: 37px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .font{
+    font-size: 34px;
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  .font{
+    font-size: 30px;
+  }
+}
+
+
+@media only screen and (max-width: 780px) {
+  .col{
+    width: 100% !important;
+  }
+
+  .seperator1{
+    flex-direction: column;
+  }
+
+  .font{
+    font-size: 37px;
+  }
+
+  .imgheight{
+    height: 320px;
+  }
+
+  .imgheightbanner{
+    height: 280px;
+  }
+
+  .containers-main{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .col{
+    width: 100% !important;
+  }
+
+  .seperator1{
+    flex-direction: column;
+  }
+
+  .font{
+    font-size: 30px;
+  }
+
+  .imgheight{
+    height: 280px;
+  }
+
+  .imgheightbanner{ 
+    height: 200px;
+  }
+
+  .containers-main{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    align-items: center;
+  }
+
+  ::ng-deep .owl-carousel .owl-prev {
+    left: -25px;
+  }
+  
+  ::ng-deep .owl-carousel .owl-next {
+    right: -25px;
+  }
+}
+
+.hr-sect {
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  margin: 8px 0px;
+}
+.hr-sect:before,
+.hr-sect:after {
+  content: "";
+  flex-grow: 1;
+  background: rgba(0, 0, 0, 0.35);
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+  margin: 0px 8px;
+}
